@@ -155,6 +155,7 @@ nav {
   font-weight: 400;
   font-size: 17px;
   color: #222222;
+  text-align: center;
 }
 
 .reasons {
@@ -249,4 +250,32 @@ nav {
   margin: 0 auto;
   border-radius: 100%;
   cursor: pointer;
+}
+
+.car {
+  min-height: 898px;
+  background: linear-gradient(to bottom, #070716 50%, white 50%);
+  padding: 59px 0 138px 0;
+}
+.car .label {
+  background-color: #fff;
+  color: #070716;
+}
+.car .title {
+  color: #fff;
+}
+.car .subtitle {
+  color: #fff;
+}
+.car img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 54px;
+}
+.car_text {
+  text-align: center;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 24px;
+  color: #222222;
 }/*# sourceMappingURL=style.css.map */
