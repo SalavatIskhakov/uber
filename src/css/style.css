@@ -21,14 +21,21 @@ nav {
   padding: 13px 70px;
   list-style-type: none;
 }
-.menu .menu_link {
+.menu_link {
   color: #ffffff;
   font-size: 15px;
   font-weight: 300;
 }
-.menu .menu_item {
+.menu_item {
   border-right: 2px dotted black;
   padding-right: 28px;
+}
+.menu_item:last-child {
+  border-right: none;
+}
+
+.hamburger {
+  display: none;
 }
 
 .subheader {
@@ -38,33 +45,33 @@ nav {
   height: 87px;
   background-color: rgba(0, 0, 0, 0.6);
 }
-.subheader .subheader_logo {
+.subheader_logo {
   display: block;
   max-width: 100%;
   margin-top: 16px;
 }
-.subheader .subheader_official {
+.subheader_official {
   margin-top: 6px;
   opacity: 0.5;
   font-weight: 100;
   font-size: 13px;
   color: #ffffff;
 }
-.subheader .subheader_call {
+.subheader_call {
   margin-top: 19px;
   font-weight: 300;
   font-size: 12px;
   text-align: right;
   color: #ffffff;
 }
-.subheader .subheader_phone {
+.subheader_phone {
   display: block;
   font-weight: 400;
   font-size: 22px;
   text-align: right;
   color: #ffffff;
 }
-.subheader .subheader_btn {
+.subheader_btn {
   margin-top: 19px;
   width: 172px;
   height: 46px;
@@ -78,7 +85,7 @@ nav {
   text-transform: uppercase;
   color: #ffffff;
 }
-.subheader .subheader_btn:hover {
+.subheader_btn:hover {
   background-image: none;
   background-color: #4ce2ff;
 }
@@ -88,7 +95,7 @@ nav {
   background: url("../img/uber_bg.png") center center/cover no-repeat;
   padding: 150px 0 135px 0;
 }
-.promo .promo_header {
+.promo_header {
   font-weight: 900;
   font-size: 60px;
   text-transform: uppercase;
@@ -97,7 +104,7 @@ nav {
   margin: 0;
   text-align: center;
 }
-.promo .promo_subheader {
+.promo_subheader {
   font-weight: 900;
   font-size: 36px;
   text-transform: uppercase;
@@ -107,7 +114,7 @@ nav {
   margin-top: 22px;
   text-align: center;
 }
-.promo .promo_descr {
+.promo_descr {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -115,7 +122,7 @@ nav {
   color: #ffffff;
   margin-top: 23px;
 }
-.promo .promo_btn {
+.promo_btn {
   display: block;
   margin: 118px auto 0 auto;
   width: 259px;
@@ -130,7 +137,7 @@ nav {
   text-transform: uppercase;
   color: #ffffff;
 }
-.promo .promo_btn:hover {
+.promo_btn:hover {
   background-image: none;
   background-color: #4ce2ff;
 }
@@ -155,6 +162,7 @@ nav {
 
 .title {
   margin-top: 35px;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 38px;
   text-align: center;
@@ -184,12 +192,12 @@ nav {
 .reasons .row {
   margin-bottom: 26px;
 }
-.reasons .reasons_item {
+.reasons_item {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.reasons .reasons_item .reasons_item_img {
+.reasons_item_img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,7 +206,7 @@ nav {
   height: 113px;
   background: #1eacc7;
 }
-.reasons .reasons_descr {
+.reasons_descr {
   margin: 0;
   width: 370px;
   font-weight: 300;
@@ -206,7 +214,7 @@ nav {
   line-height: 21px;
   color: #202020;
 }
-.reasons .reasons_descr h3 {
+.reasons_descr h3 {
   margin: 0;
   line-height: 21px;
   color: #1eacc7;
@@ -406,7 +414,6 @@ footer .footer_social_item {
   background: #070716;
   color: #ffffff;
   border-radius: 100%;
-  font-size: 10;
 }
 footer .footer_text {
   font-weight: 300;
@@ -446,4 +453,312 @@ footer .footer_russia {
   font-size: 11px;
   text-transform: uppercase;
   color: #1fbad6;
+}
+
+.xs-visible {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .menu_item {
+    padding-right: 20px;
+  }
+  .menu_link {
+    font-size: 13px;
+  }
+
+  .promo_header {
+    font-size: 50px;
+  }
+
+  .reasons_item {
+    align-items: flex-start;
+  }
+  .reasons_descr {
+    width: 300px;
+  }
+
+  .mobile_item {
+    width: 300px;
+  }
+
+  footer .footer_text_big {
+    font-size: 12px;
+  }
+}
+@media (max-width: 991px) {
+  .menu_item {
+    padding-right: 8px;
+  }
+  .menu_link {
+    font-size: 10px;
+  }
+
+  .subheader_logo img {
+    width: 100%;
+  }
+  .subheader_official {
+    font-size: 11px;
+  }
+  .subheader_phone {
+    font-size: 18px;
+  }
+  .subheader_btn {
+    margin-top: 21px;
+    height: 40px;
+    width: 100%;
+  }
+
+  .promo_header {
+    font-size: 40px;
+  }
+  .promo_subheader {
+    font-size: 30px;
+  }
+
+  .reasons_item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .reasons_descr {
+    margin-top: 20px;
+  }
+
+  .car img {
+    width: 100%;
+  }
+
+  footer .footer_social {
+    width: 25%;
+  }
+  footer .footer_social_item {
+    height: 25px;
+    width: 25px;
+    font-size: 13px;
+  }
+  footer .footer_text {
+    width: 50%;
+  }
+  footer .footer_text_small {
+    font-size: 8px;
+  }
+  footer .footer_apps {
+    width: 25%;
+  }
+  footer .footer_apps img {
+    width: 50px;
+    height: 20px;
+    margin-right: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .menu {
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100vh;
+    padding: 20px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.6s all;
+  }
+  .menu_active {
+    left: 0;
+  }
+  .menu_item {
+    padding-right: 0;
+    border: none;
+    margin: 10px 0;
+  }
+  .menu_link {
+    font-size: 20px;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+  }
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 2px;
+    transition: 0.5s all;
+  }
+  .hamburger_active span {
+    margin-bottom: -2px;
+  }
+  .hamburger_active span:nth-child(1) {
+    transform: rotate(-45deg);
+  }
+  .hamburger_active span:nth-child(2) {
+    display: none;
+  }
+  .hamburger_active span:nth-child(3) {
+    transform: rotate(45deg);
+  }
+
+  .xs-hidden {
+    display: none;
+  }
+
+  .xs-visible {
+    display: block;
+  }
+
+  .subheader_phone {
+    display: block;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+  }
+  .subheader_btn {
+    display: block;
+    width: 220px;
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  .promo_header {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  footer .footer_social {
+    width: 50%;
+  }
+  footer .footer_social_item {
+    height: 32px;
+    width: 32px;
+    margin-right: 0px;
+    margin-left: 7px;
+    font-size: 15px;
+  }
+  footer .footer_text {
+    display: none;
+  }
+  footer .footer_apps {
+    width: 50%;
+  }
+  footer .footer_apps img {
+    width: 65px;
+    height: 23px;
+    margin-right: 7px;
+  }
+}
+@media (max-width: 575px) {
+  .subheader {
+    height: 60px;
+  }
+  .subheader_official {
+    display: none;
+  }
+  .subheader_logo {
+    margin-top: 16px;
+  }
+  .subheader_phone {
+    font-size: 12px;
+    margin-top: 11px;
+  }
+  .subheader_btn {
+    width: 110px;
+    height: 22px;
+    font-size: 10px;
+    margin-top: 6px;
+  }
+
+  .promo {
+    min-height: 400px;
+    padding: 133px 0 35px 0;
+  }
+  .promo_descr {
+    display: none;
+  }
+  .promo_header {
+    font-size: 30px;
+    padding: 0 24px;
+    line-height: 35px;
+  }
+  .promo_subheader {
+    font-size: 20px;
+    margin-top: 33px;
+    padding: 0 10px;
+  }
+  .promo_btn {
+    width: 210px;
+    height: 50px;
+    margin-top: 72px;
+  }
+
+  .menu {
+    width: 85%;
+  }
+
+  .reasons {
+    padding: 22px 0 0 0;
+  }
+  .reasons_item_img {
+    width: 100px;
+    height: 100px;
+  }
+  .reasons_descr {
+    width: 100%;
+    margin-top: 27px;
+  }
+  .reasons_subtitle {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 16px;
+    margin-top: 16px;
+    line-height: 16px;
+  }
+
+  .mobile {
+    padding-bottom: 42px;
+  }
+
+  .car {
+    min-height: 390px;
+    padding: 26px 0 31px 0;
+    background: #070716;
+  }
+  .car .title,
+.car .subtitle {
+    display: none;
+  }
+  .car img {
+    margin-top: 36px;
+  }
+  .car_text {
+    color: #fff;
+  }
+
+  .require {
+    padding: 24px 0 30px 0;
+  }
+  .require_list {
+    padding-left: 33px;
+  }
+
+  footer .footer_links {
+    flex-direction: column;
+  }
+  footer .footer_socials, footer .footer_apps {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
